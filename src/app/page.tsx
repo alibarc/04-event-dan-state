@@ -1,6 +1,7 @@
 "use client";
 import Tombol_1, { Tombol_2, Tombol_3 } from "../components/button";
 import Gallery from "@/components/gallery";
+import Form from "@/components/form";
 
 export default function Home(){
   return (
@@ -17,7 +18,9 @@ export default function Home(){
           <Tombol_3 isiPesan="Child Element : Tombol-2" namaTombol="Tombol-2" />
         </div>
         <br></br>
-        <Gallery />      
+        <Gallery />
+        <br></br>
+        <Form />    
     </>
   );
 }
