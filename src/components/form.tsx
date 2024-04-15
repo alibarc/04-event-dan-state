@@ -63,3 +63,40 @@ function submitForm(jawaban) {
         }, 500);
     });
 }
+
+export function Form_2() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+
+    const fullName = firstName + ' ' + lastName;
+
+    function handleFirstNameChange(e) {
+        setFirstName(e.target.value)
+    }
+
+    function handleLastNameChange(e) {
+        setLastName(e.target.value)
+    }
+
+    return (
+        <>
+        <h2>Silakan isi nama lengkap</h2>
+        <label className="block w-full m-2">
+            Nama depan:
+            <input className="text-sm text-black ml-2 rounded"
+                value={firstName} 
+                onChange={handleFirstNameChange}
+                />
+        </label>
+
+        <label className="block w-full m-2">
+            Nama belakang:
+            <input className="text-sm text-black ml-2 rounded"
+                value={lastName}
+                onChange={handleLastNameChange}
+                />
+        </label>
+        <p>Nama lengkap adalah : <b className="text-blue-600">{fullName}</b></p>
+        </>
+    )
+}
